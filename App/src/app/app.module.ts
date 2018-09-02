@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { SubchaptersPage } from '../pages/subchapters/subchapters';
 import { FormularyPage} from '../pages/formulary/formulary';
 import { SubstancePage} from '../pages/substance/substance';
+import {SubstancesPage} from '../pages/substances/substances';
 
 import { ExpandableComponent} from '../components/expandable/expandable';
 
@@ -29,6 +30,7 @@ import {AppService} from '../services/app.service';
   SubchaptersPage,
   FormularyPage,
   SubstancePage,
+  SubstancesPage,
   ExpandableComponent,
   SortPipe
   ],
@@ -44,7 +46,8 @@ import {AppService} from '../services/app.service';
   HomePage,
   SubchaptersPage,
   FormularyPage,
-  SubstancePage
+  SubstancePage,
+  SubstancesPage
   ],
   providers: [
   StatusBar,

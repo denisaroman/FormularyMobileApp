@@ -37,8 +37,23 @@ export class FormularyPage {
             }
             
           }
+          console.log(this.data);
         
     });
   }
+
+  /*filterSubstances(param:any):void{
+    this.appService.getTodos();
+
+    let val : string = param;
+
+    if(val.trim()!==''){
+      this.data=this.data.filter((item)=>
+      {
+        return item.Title.toLowerCase().indexOf(val.toLowerCase())>-1;
+      }
+    )
+    }
+  }*/
 
 }

@@ -8,10 +8,15 @@
 				<a href="https://www.surreyandsussex.nhs.uk">
 					<img src="https://www.surreyandsussex.nhs.uk/wp-content/uploads/2018/03/NHS-70-SASH-logo-web-1.png" alt="" />
 				</a>
+				<hr>
+				<button ion-button (click)="goToSubstances()">
+						Search Substances
+					  </button>
 	</div>
 </ion-header>
 
 <ion-content no-padding style=" background-color: rgb(48, 60, 116);">
+		
 	<div *ngFor="let chapter of data| orderBy: 'Number' ">	
 		<ion-card (click) = "goToSubchapterDetail(chapter)">
 			<ion-card-header>					

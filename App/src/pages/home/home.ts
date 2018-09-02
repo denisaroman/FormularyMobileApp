@@ -4,6 +4,7 @@ import { LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import {AppService} from '../../services/app.service';
 import { SubchaptersPage } from '../subchapters/subchapters';
+import { SubstancesPage } from '../substances/substances';
 
 @Component({
 	selector: 'page-home',
@@ -142,6 +143,12 @@ export class HomePage {
 	goToSubchapterDetail(chapter:any){
 		this.navCtrl.push(SubchaptersPage, {chapterNumber:chapter.Number});
 	}
+
+	goToSubstances(){
+		this.navCtrl.push(SubstancesPage);
+	}
+
+	
 }
 export interface Data{
 	Number: String,
