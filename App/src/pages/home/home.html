@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title text-center>	
+				FORMULARY APP	
+		</ion-title>
+	</ion-navbar>
+	<div class="logo-wrapper" style="background-color: #fff; padding:0%">
+				<a href="https://www.surreyandsussex.nhs.uk">
+					<img src="https://www.surreyandsussex.nhs.uk/wp-content/uploads/2018/03/NHS-70-SASH-logo-web-1.png" alt="" />
+				</a>
+	</div>
+</ion-header>
+
+<ion-content no-padding style=" background-color: rgb(48, 60, 116);">
+	<div *ngFor="let chapter of data| orderBy: 'Number' ">	
+		<ion-card (click) = "goToSubchapterDetail(chapter)">
+			<ion-card-header>					
+				BNF Chapter {{chapter.Number}}
+			</ion-card-header>
+
+			<ion-card-content>
+				{{chapter.Chapter}} 
+			</ion-card-content>
+		</ion-card>
+	</div>
+</ion-content>

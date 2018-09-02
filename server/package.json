@@ -1,0 +1,32 @@
+{
+  "name": "meanauthapp",
+  "version": "1.0.0",
+  "description": "MEAN stack authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "canvas": "1.6.2",
+    "canvasfilters": "git://github.com/kig/canvasfilters.git",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongojs": "^2.6.0",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "config": {
+    "ionic_copy": "./scripts/copy-custom-libs.js"
+  },
+  "author": "Brad Traversy",
+  "license": "ISC"
+}

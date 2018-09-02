@@ -1,0 +1,107 @@
+
+<ion-header>
+    <ion-navbar>
+            <ion-title text-center>{{title}}</ion-title> 
+    </ion-navbar> 
+    <div class="logo-wrapper" style="background-color: #fff; padding: 0%;">
+        <a href="https://www.surreyandsussex.nhs.uk">
+            <img src="https://www.surreyandsussex.nhs.uk/wp-content/uploads/2018/03/NHS-70-SASH-logo-web-1.png" alt="" />
+        </a>        
+    </div>
+</ion-header>
+  
+
+<ion-content no-padding style=" background-color: rgb(48, 60, 116);">
+        <div *ngFor="let subcategory of data ">	
+            <ion-card>
+                <ion-card-header style="font-size:15px; background-color:#E1E1C8; font-weight: bold; ">					
+                    {{subcategory.Title}}
+                </ion-card-header>
+    
+                <ion-card-content no-padding *ngFor="let name of subcategory.MedicinesGroup ">
+                  <p text-center style="background-color: grey; color: floralwhite; font-size: 15px;">{{name.Name}}</p>
+                  <!--ion-card  *ngFor="let content of name.Content">
+                    <ion-card-header-->
+                        
+                        <!--div *ngFor="let content of name.Content" class="tab">
+                            <input id="content" type="checkbox" name="tabs">
+                            <label for="content">{{content.Substance}}</label>
+                            <div class="tab-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                        </div-->
+                    <!--/ion-card-header>
+                  </ion-card-->
+                  <div *ngFor="let content of name.Content">
+                        <div class="tab blue">
+                                <input id="{{content.Substance}}" type="radio" name="tabs2">
+                                <label for="{{content.Substance}}">{{content.Substance}}</label>
+                                <div class="tab-content" *ngFor="let detail of content.Details">
+                                    <div class="wrapper">
+                                            <p >{{detail.Brand}}</p>
+                                            <p>{{detail.Note}}</p>
+                                            <hr>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+
+                      
+                </ion-card-content>
+            </ion-card>
+        </div>
+</ion-content>
+
+<!--div class="wrapper">
+        <h1>Pure CSS Accordion</h1>
+        
+        <div class="half">
+          <p>Open <strong>multiple</strong></p>
+          <div class="tab">
+            <input id="tab-one" type="checkbox" name="tabs">
+            <label for="tab-one">Label One</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-two" type="checkbox" name="tabs">
+            <label for="tab-two">Label Two</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-three" type="checkbox" name="tabs">
+            <label for="tab-three">Label Three</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="half">
+          <p>Open <strong>one</strong></p>
+          <div class="tab blue">
+            <input id="tab-four" type="radio" name="tabs2">
+            <label for="tab-four">Label One</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+          <div class="tab blue">
+            <input id="tab-five" type="radio" name="tabs2">
+            <label for="tab-five">Label Two</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+          <div class="tab blue">
+            <input id="tab-six" type="radio" name="tabs2">
+            <label for="tab-six">Label Three</label>
+            <div class="tab-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            </div>
+          </div>
+        </div>
+      </div-->
