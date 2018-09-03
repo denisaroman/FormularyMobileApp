@@ -39,8 +39,9 @@ export class SubchaptersPage {
     });
   }
 
-  goToFormulary(list:any){
-		this.navCtrl.push(FormularyPage, {listCategoryNumber:list.CategoryNumber});
+  goToFormulary(list:any, title:any){
+    this.navCtrl.push(FormularyPage, {chapterChapter: title, listCategoryNumber:list.CategoryNumber});
+    //console.log(this.data.chapterChapter);
 	}
 
 }

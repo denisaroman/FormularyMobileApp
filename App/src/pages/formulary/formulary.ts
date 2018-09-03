@@ -27,15 +27,17 @@ export class FormularyPage {
   ionViewDidLoad() {
     this.appService.getTodos().subscribe(todos => {
       this.data=todos;  
-      
+      console.log(this.navParams.data.chapterChapter);
           for(const i of todos){
+           if(i.Chapter===this.navParams.data.chapterChapter){
             for(const j of i.List){
               if(j.CategoryNumber===this.navParams.data.listCategoryNumber){
               this.title=j.CategoryName;
               this.data=j.Subcategories;
             }
             }
-            
+          
+          }
           }
           console.log(this.data);
         

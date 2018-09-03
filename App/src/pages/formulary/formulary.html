@@ -38,13 +38,12 @@
                         <div class="tab blue">
                                 <input id="{{content.Substance}}" type="radio" name="tabs2">
                                 <label for="{{content.Substance}}">{{content.Substance}}</label>
-                                <div class="tab-content" *ngFor="let detail of content.Details">
-                                    <div class="wrapper">
-                                            <p >{{detail.Brand}}</p>
-                                            <p>{{detail.Note}}</p>
-                                            <p >{{detail.Link}}</p>
-                                            <p>{{detail.Color}}</p>
-                                            <hr>
+                                <div class="tab-content" *ngFor="let detail of content.Details" [ngStyle] ="{'background-color':detail.Color}">
+                                    <div class="wrapper" style="color:chocolate; font-weight: bold">
+                                      {{detail.Brand}} 
+                                      <br>
+                                      <a [href]="detail.Link">{{detail.Note}}</a>
+                                      <hr>
                                     </div>
                                 </div>
                         </div>

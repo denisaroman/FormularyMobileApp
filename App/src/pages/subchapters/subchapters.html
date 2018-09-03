@@ -13,7 +13,8 @@
 
 <ion-content no-padding style=" background-color: rgb(48, 60, 116);">
         <div *ngFor="let list of data ">	
-            <ion-card (click) = "goToFormulary(list)">
+            <ion-card (click) = "goToFormulary(list, title)">
+                
                 <ion-card-header>					
                     Number {{list.CategoryNumber}}
                 </ion-card-header>
